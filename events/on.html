@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpine js - show & if</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="//unpkg.com/alpinejs"></script>
+
+</head>
+
+<body>
+    <div x-data="{open: false, pesan: 'Alert'}"
+        class="container transition mx-auto w-1/2 text-center mt-10 bg-lime-200 p-10 rounded-xl shadow">
+        <button @click="alert(pesan)" x-text="pesan"
+            x-bind:class="open ? 'bg-gray-600' : 'bg-cyan-600'"
+            class="text-white text-center px-3 py-1 rounded"></button>
+
+            <button @mouseenter="alert('ini mouse enter')" x-bind:class="open ? 'bg-gray-600' : 'bg-cyan-600'"
+                class="text-white text-center px-3 py-1 rounded"> mouse enter</button>
+
+        
+    </div>
+
+</body>
+
+</html>

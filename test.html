@@ -4,8 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alpine js</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="//unpkg.com/alpinejs"></script>
+    
 </head>
 <body>
+    <div x-data="{nama: 'Ogi', angka: 3}" class="container mx-auto w-1/2 text-center mt-10 bg-lime-200 p-10 rounded-xl shadow">
+        <h1 class="text-3xl font-bold bg-gradient-to-r from-blue-500 to-pink-400 bg-clip-text text-transparent drop-shadow-sm">Halo, <span x-text="nama"></span></h1>
+        <div class=""><span x-text="angka"></span> adalah bilangan <span x-text="angka % 2 == 0 ? 'genap': 'ganjil'"></span></div>
+    </div>
+
+    <div x-data="{linkHtml: '<a href=\'https://youtube.com\' target=\'_blank\'>Hello</a>'}">
+        <span x-html="linkHtml"></span>
+    </div>
     
 </body>
 </html>

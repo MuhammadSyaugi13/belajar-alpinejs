@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpine js - show & if</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="//unpkg.com/alpinejs"></script>
+    
+</head>
+<body>
+    <div x-data="{open: false}" class="container transition mx-auto w-1/2 text-center mt-10 bg-lime-200 p-10 rounded-xl shadow">
+        <button @click="open = !open" class="bg-gray-400 text-white text-center px-3 py-1">Buka</button>
+
+        <!-- ini penggunaan show -->
+        <div x-show="open" x-transition.duration.500ms class="bg-lime-400 text-center py-2 px-5 mt-4 transition">ini sudah dibuka</div>
+
+        <!-- ini dengan if. *ini gk bisa pake transition -->
+        <template x-if="open">
+            <div class="bg-lime-400 text-center py-2 px-5 mt-4 transition">ini sudah dibuka</div>
+        </template>
+    </div>
+    
+</body>
+</html>
